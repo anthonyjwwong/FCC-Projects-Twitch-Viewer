@@ -37,6 +37,7 @@ button {
   color: white;
   font-size: 0.8em;
   outline: none;
+  font-weight: 300;
 }
 
 table{
@@ -101,4 +102,74 @@ h3 {
 #all:active, #online:active, #offline:active {
   box-shadow: 0 5px #666;
   transform: translateY(2px);
+}
+
+
+@media only screen and (min-width: 600px) {
+  #all, #online, #offline {
+     border: 1px solid white;
+     border-radius: 10px;
+     padding: 10px;
+     width: 120px;
+     cursor: pointer;
+  }
+
+  button {
+    font-size: 1.5em;
+  }
+
+  .title td {
+    font-size: 1.8em;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid white;
+  }
+
+  tbody td {
+    font-size: 1.2em;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #all, #online, #offline {
+     border: 1px solid white;
+     border-radius: 10px;
+     padding: 10px;
+     width: 120px;
+     cursor: pointer;
+  }
+
+  table {
+    width: 80vw;
+  }
+  button {
+    font-size: 1.5em;
+  }
+
+  .title td {
+    font-size: 1.8em;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid white;
+  }
+
+  tbody td {
+    font-size: 1.2em;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
 }
