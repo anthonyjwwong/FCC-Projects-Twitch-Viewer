@@ -2,7 +2,10 @@
 Check if your favorite streamers are currently online
 
 ## Why?
-One of the old freecodecamp projects
+One of the old freecodecamp projects.
+
+## Where?
+Works on mobiles/tablet/PC
 
 ## Usage 
 You can download the file, right click the index.html and fire it off in your favorite browser.
