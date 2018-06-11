@@ -3,6 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: #43464B;
   color: white;
+  width: 100vw;
 }
 
 header h1 {
