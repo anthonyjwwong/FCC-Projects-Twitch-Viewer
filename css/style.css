@@ -1,0 +1,104 @@
+body {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  background: #43464B;
+  color: white;
+}
+
+header h1 {
+  font-weight: 300;
+  text-align: center;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+
+.search{
+  text-align: center;
+}
+
+input {
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  font-size: 1em;
+}
+
+button {
+  border: none;
+  background: inherit;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+table{
+    margin: 60px auto;
+    width: 980px;
+    text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+td {
+  width: 300px;
+}
+
+thead {
+  text-align: center;
+}
+
+.channels_body {
+  padding-top: 1000px;
+}
+
+.title td {
+  font-size: 30px;
+  padding-top: 30px;
+  text-decoration: underline;
+}
+
+tbody td {
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.displayNone {
+  display: none;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+#all, #online, #offline {
+   border: 1px solid white;
+   border-radius: 10px;
+   padding: 10px;
+   width: 100px;
+   cursor: pointer;
+}
+
+#all:hover, #online:hover, #offline:hover {
+  background-color: #666;
+}
+
+#all:active, #online:active, #offline:active {
+
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
