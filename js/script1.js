@@ -1,75 +1,52 @@
 "use strict"
 
-
 let input = document.querySelector('.channels_input');
 let button = document.querySelector('.channels_button');
 let channels= document.querySelector('.channel_body');
 
-
+//The url that we're calling
 let calls = {
   url: "https://wind-bow.glitch.me/twitch-api/",
   channels: "channels/",
   streams: "streams/"
 }
 
+//return the full url
 function apiCalls(type) {
   return calls.url + type + input.value;
 }
 
-let buttons = {
-
-  online(ele) {
-    for (let i = 0; i < ele.length; i++) {
-      if (ele[i].classList.contains("offline")) {
-        ele[i].classList.add("displayNone");
-      } else {
-        ele[i].classList.remove("displayNone");
-      }
-    }
-  },
-  offline(ele) {
-    for (let i = 0; i < ele.length; i++) {
-      if (ele[i].classList.contains("online")) {
-        ele[i].classList.add("displayNone");
-      } else {
-        ele[i].classList.remove("displayNone");
-      }
-    }
-  },
-  allButtons(ele) {
-    for (let i =0; i < ele.length; i++){
-      ele[i].classList.remove("displayNone");
-    }
-  }
-}
-
-
-
+//Creating everything when input is searched.
 let logic = {
 
-
   createEle(display, logo, follower, stream, status) {
+    //if name isn't registered
     if (display === undefined) {
       alert("No such channels, sorry!")
     } else {
+      //else, create TR element
       let tr = document.createElement("tr");
 
+      //create a td for the Name nad append
       let displayTd = document.createElement("td");
       let displayNode = document.createTextNode(display);
       let h3 = document.createElement("h3");
       h3.appendChild(displayNode);
       displayTd.appendChild(h3);
 
+      //create TD for logo and append
       let imageTd = document.createElement("td");
       let image = document.createElement("img");
       image.src = logo;
       imageTd.appendChild(image);
 
+      //create a p for number of followers and append to image TD
       let p = document.createElement("p");
       let followerNode = document.createTextNode("Followers: " + follower);
       p.appendChild(followerNode);
       imageTd.appendChild(p);
 
+      //check if stream is online or not.
       let channelTd = document.createElement("td");
       let statusP = document.createElement("p");
       if (stream === null) {
@@ -81,9 +58,8 @@ let logic = {
       }
       channelTd.appendChild(statusP);
 
-
+      //append everything to body of table
       tr.appendChild(imageTd);
-
       tr.appendChild(displayTd);
       tr.appendChild(channelTd);
       channels.appendChild(tr);
@@ -95,17 +71,21 @@ let logic = {
 
 
 
-
+//when button is clicked
 button.addEventListener('click', function(){
+  //calls the urls, and get all the data.
   $.when(
     $.getJSON(apiCalls(calls.channels)),
     $.getJSON(apiCalls(calls.streams))
   ).done(function(data,data1) {
+    //arguements are the data that we need for our function.
+    //Name, Logo, Followers, Stream(online/offline), Status
     logic.createEle(data[0].display_name, data[0].logo, data[0].followers, data1[0].stream, data[0].status);
    })
    input.value ="";
 })
 
+//For Hard Code // FCC and ESL_SC2;
 $.when(
   $.getJSON("https://wind-bow.glitch.me/twitch-api/channels/freecodecamp"),
   $.getJSON("https://wind-bow.glitch.me/twitch-api/streams/freecodecamp")
@@ -155,6 +135,7 @@ $.when(
 })
 
 
+//EventListeners for offline,online,all buttons.
 let allButtons = {
   all: document.querySelector('#all'),
   onlineButton: document.querySelector("#online"),
