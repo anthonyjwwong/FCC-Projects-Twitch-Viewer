@@ -1,125 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  background: #43464B;
-  color: white;
-  width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    background:#55585d;    
 }
 
-header h1 {
-  font-weight: 300;
-  text-align: center;
+header {
+    width: 100%;
+    background-color: #43464b;
+
 }
 
-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  border: 2px solid white;
+.header_container {
+    padding: 10px 0;
+    color: white;
 }
 
-.search{
-  text-align: center;
-}
-
-input {
-  background-color: inherit;
-  border: none;
-  border-bottom: 1px solid white;
-  outline: none;
-  color: white;
-  font-size: 1em;
-}
-
-button {
-  border: none;
-  background: inherit;
-  color: white;
-  font-size: 0.8em;
-  outline: none;
-  font-weight: 300;
-}
-
-table{
-    margin: 60px auto;
-    width: 90vw;
+.header_title {
     text-align: center;
 }
 
-.title {
-
-  font-weight: 300;
+.header_searchbar {
+    padding-top: 8px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-h2 {
-  font-size: 20px;
-  font-weight: 300;
+.header_searchbar input {
+    font-family: "Montserrat", sans-serif;
+    background: white;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #282a2d;
+    padding: 5px 10px;
+ 
 }
 
-td {
-  width: 300px;
+.header_searchbar button {
+    border: none;
+    background: inherit;
+    color: white;
+    font-size: 0.8em;
+    outline: none;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
 }
 
-thead {
-  text-align: center;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid white;
+  }
+  
+  table{
+      margin: 30px auto;
+      width: 90vw;
+      text-align: center;
+      color: white;
+      border-collapse: collapse;
+}
+  
+    
+  #all, #online, #offline {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    width: 80px;
+    cursor: pointer;
+    background: inherit;
+    color: white;
+ }
+ 
+ #all:hover, #online:hover, #offline:hover {
+   background-color: #666;
+ }
+ 
+ #all:active, #online:active, #offline:active {
+   box-shadow: 0 5px #666;
+   transform: translateY(2px);
+ }
+ 
+  
+  h2 {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  td {
+    width: 300px;
+  }
+  
+  thead {
+    text-align: center;
+  }
+  
+  .channels_body {
+    padding-top: 1000px;
+  }
+  
+  .title td {
+    font-size: 1.2em;
+    padding-top: 30px;
+    text-decoration: underline;
+  }
+  
+  tbody td {
+    padding-top: 20px;
+    font-size: 0.75em;
+  }
+  
+  .displayNone {
+    display: none;
+  }
+  
+  h3 {
+    font-weight: bolder;
+    font-size: 12px;
+  }
+
+.offlineText {
+    color: red;
 }
 
-.channels_body {
-  padding-top: 1000px;
-}
 
-.title td {
-  font-size: 1.2em;
-  padding-top: 30px;
-  text-decoration: underline;
-}
 
-tbody td {
-  padding-top: 20px;
-  font-size: 0.75em;
+tbody p {
+  font-weight: bold;
 }
-
-.displayNone {
-  display: none;
-}
-
-h3 {
-  font-weight: 300;
-}
-
-#all, #online, #offline {
-   border: 1px solid white;
-   border-radius: 10px;
-   padding: 5px;
-   width: 80px;
-   cursor: pointer;
-}
-
-#all:hover, #online:hover, #offline:hover {
-  background-color: #666;
-}
-
-#all:active, #online:active, #offline:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(2px);
-}
-
 
 @media only screen and (min-width: 600px) {
-  #all, #online, #offline {
-     border: 1px solid white;
-     border-radius: 10px;
-     padding: 10px;
-     width: 120px;
-     cursor: pointer;
+  .header_container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
   }
 
-  button {
-    font-size: 1.5em;
+  .header_searchbar {
+    margin: 0;
   }
 
-  .title td {
-    font-size: 1.8em;
+  .header_searchbar button {
+    font-weight: bolder;
   }
 
   img {
@@ -129,52 +155,68 @@ h3 {
     border: 2px solid white;
   }
 
-  tbody td {
-    font-size: 1.2em;
+  tbody p {
+    font-size: 15px;
   }
-  
-   table {
-   width: 70vw;
+
+  tbody h3 {
+    font-size: 15px;
   }
-  
-  header h1 {
-    font-size: 2em;
+
+  tbody tr {
+    padding-top: 200px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  #all, #online, #offline {
-     border: 1px solid white;
-     border-radius: 10px;
-     padding: 10px;
-     width: 120px;
-     cursor: pointer;
+@media only screen and (min-width: 800px) {
+  header {
+    width: 100%;
+  }
+
+  .header_container {
+    display: flex;
+    justify-content: space-between;
+    width: 750px;
+    margin: 0 auto;
   }
 
   table {
-    width: 55vw;
-  }
-  button {
-    font-size: 1.2em;
-    font-weight:300;
+    margin-top: 50px;
+    width: 750px;
   }
 
-  .title td {
-    font-size: 1.8em;
+  .header_searchbar {
+    margin: 0;
+  }
+
+  .header_searchbar button {
+    font-weight: bolder;
   }
 
   img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50px;
     border: 2px solid white;
   }
 
-  tbody td {
-    font-size: 1em;
+  tbody p {
+    font-size: 15px;
   }
 
-  header h1 {
-    font-size: 2em;
+  tbody h3 {
+    font-size: 15px;
   }
+
+
+  #all, #online, #offline {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    background: inherit;
+    color: white;
+    margin: 0 10px;
+ }
 }
