@@ -1,62 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TwitchTv Viewer</title>
-  <link href="css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <h1>Twitch Tv Viewer</h1>
-  </header>
-  <main>
-    <div class="search">
-      <input type="text" class="channels_input"></input>
-      <button class="channels_button">Search</button>
-    </div>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
 
-    <table border="0" id="channels">
-      <thead>
-        <tr>
-          <td colspan="3">
-            <div class="buttons">
-              <button id="online">Online</button>
-              <button id="all">All</button>
-              <button id="offline">Offline</button>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="header_container">
+                <div class="header_title">
+                    <h1>Twitch Tv</h1>
+                </div>
+                <div class="header_searchbar">
+                    <input type="text" class="channel_input" placeholder="User..."></input>
+                    <button class="channel_button">Search</button>
+                </div>
             </div>
-          </td>
-       </tr>
-       <tr class="title">
-         <td>Logo</td>
-         <td>Name</td>
-         <td>Status</td>
-       </tr>
+        </header>
+        <main>
+            <table border="0" id="channels">
+                <thead>
+                    <tr>
+                        <td colspan="3">
+                            <div class="buttons">
+                                <button id="online">Online</span></button>
+                                <button id="all">All</button>
+                                <button id="offline">Offline</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="title">
+                        <td>Logo</td>
+                        <td>Name</td>
+                        <td>Status</td>
+                    </tr>
+                </thead>
+                <tbody class="channel_body">
 
-     </thead>
-     <tbody class="channel_body">
-
-       <tr class="freecodecamp">
-        <td class="fccLogo"></td>
-        <td class="fccName"></td>
-        <td class="fccStatus"></td>
-       </tr>
-       <tr class="esl_sc2">
-        <td class="eslLogo"></td>
-        <td class="eslName"></td>
-        <td class="eslStatus"></td>
-      </tr>
-
-     </tbody>
-    </table>
-
-
-  </main>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-  <script src="js/script1.js"></script>
-</body>
+                </tbody>
+            </table>
+        </main>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+        <script src="js/scripts.js" async defer></script>
+    </body>
 </html>
