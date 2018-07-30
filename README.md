@@ -1,15 +1,20 @@
-# twitchViewer
-Using jQuery ajax() Method to get information using FCC's Twitch url
+## Twitch Tv Viewer
+This is a twitch tv viewer created as a freecodecamp project.
+https://anthonyjwwong.github.io/Twitchtv-Viewer/.
 
-## What can you do with it?
-1. Check if your favorite streamers are currently online
-2. Check their follower count.
-3. That's pretty much it.
+## Tech/framework used
+<b>Built with</b>
+- Visual Studio Code(https://visualstudio.microsoft.com/downloads/)
+- HTML/CSS
+- AJAX jquery.get()
+ 
+ 
+## Installation
+There isn't much to install here. 
+If you want to check it out
+2. Download the folders. 
+3. Load it up in your text editor or IDE.
 
-## Where?
-Works on mobiles/tablet/PC
+## API Reference
+Freecodecamp's Twitch API.
 
-## Usage 
-You can download the file, right click the index.html and fire it off in your favorite browser.
-or just check out the link here.
- https://anthonyjwwong.github.io/FCC-Projects-Twitch-Viewer/
