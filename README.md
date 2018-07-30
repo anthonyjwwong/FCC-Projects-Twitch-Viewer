@@ -1,5 +1,5 @@
 ## Twitch Tv Viewer
-This is a twitch tv viewer created as a freecodecamp project.
+This is a twitch tv viewer created as a freecodecamp project.<br>
 https://anthonyjwwong.github.io/Twitchtv-Viewer/.
 
 ## Tech/framework used
@@ -8,12 +8,11 @@ https://anthonyjwwong.github.io/Twitchtv-Viewer/.
 - HTML/CSS
 - AJAX jquery.get()
  
- 
 ## Installation
 There isn't much to install here. 
 If you want to check it out
-2. Download the folders. 
-3. Load it up in your text editor or IDE.
+1. Download the folders. 
+2. Load it up in your text editor or IDE.
 
 ## API Reference
 Freecodecamp's Twitch API.
